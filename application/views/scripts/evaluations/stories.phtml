@@ -1,0 +1,86 @@
+<br /><br />
+
+
+
+<div  style="padding: 25px;">
+    <table class = "table" DIR="rtl">
+        <thead>
+            <tr >
+                
+                <td> 
+	                <strong>
+	                        التصنيف  
+	                </strong>
+                </td>
+                <td> 
+	                <strong>
+	                        القصص  
+	                </strong>
+                </td>
+                <td> 
+	                <strong>
+	                        عدد مرات المشاهدة للقصص الثابتة  
+	                </strong>
+                </td>
+            </tr>
+        </thead>
+
+        <?php
+			foreach ($this->stories[0] as $story){
+		?>
+
+            <tr class="success">
+            	<td>
+                   <?= $story['cat_name'] ?>
+                </td>
+                <td>
+                   <?= $story['name'] ?>
+                </td>
+                <td>
+                    <?=$story['watchSteps']?>
+                </td>
+            </tr>
+
+            <?php
+            }
+            ?>
+            <thead>
+            <tr >
+                
+                <td> 
+	                <strong>
+	                        التصنيف  
+	                </strong>
+                </td>
+                <td> 
+	                <strong>
+	                        القصص  
+	                </strong>
+                </td>
+                <td> 
+	                <strong>
+	                        عدد مرات المشاهدة للقصص المتحركة  
+	                </strong>
+                </td>
+            </tr>
+        </thead>
+            <?php
+            foreach ($this->stories[1] as $story){
+            ?>
+            <tr class="success">
+            	<td>
+                   <?= $story['cat_name'] ?>
+                </td>
+                <td>
+                   <?= $story['name'] ?>
+                </td>
+                <td>
+                    <?=$story['watchStory']?>
+                </td>
+            </tr>
+            <?php
+            }
+            ?>
+
+    </table>
+</div>
